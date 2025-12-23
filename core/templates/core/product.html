@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>ST Print</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-warning shadow">
+
+    <div class="container">
+      <a class="navbar-brand h1" href="index.html">
+        <img src="assets/img/logo.png" width="200" height="100" alt="ST Print">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <h4><a class="nav-link" href="index.html">หน้าแรก</a></h4>
+          </li>
+          <li class="nav-item">
+            <h4><a class="nav-link" href="price.html">ราคาสินค้า</a></h4>
+          </li>
+          <li class="nav-item">
+            <h4><a class="nav-link" href="work.html">ขั้นตอนการทำงาน</a></h4>
+          </li>
+          <li class="nav-item">
+            <h4><a class="nav-link" href="product.html">ผลงาน</a></h4>
+          </li>
+        </ul>
+      </div>
+         <script>
+        document.addEventListener("DOMContentLoaded", function () {
+  const links = document.querySelectorAll(".nav-link"); // เลือกลิงก์ทั้งหมด
+  const currentUrl = window.location.pathname.split("/").pop(); // ดึงชื่อไฟล์หน้าปัจจุบัน
+
+  links.forEach(link => {
+    if (link.getAttribute("href") === currentUrl) {
+      link.classList.add("active"); // เพิ่มคลาส active ให้ลิงก์ที่ตรงกับหน้า
+    }
+  });
+});
+        </script>
+    </div>
+  </nav>
+  <!-- Close Header -->
+  <!-- Start Banner Hero -->
+  <div id="index_banner" class="banner-vertical-center-index container-fluid pt-5">
+    <div class="w-100 bg-primary py-3">
+      <div class="container">
+        <div class="row pt-2">
+          <div class="col-12 d-flex justify-content-center align-items-center" style="height: 100%;">
+            <style>
+              .white-text {
+                color: white;
+                text-align: center;
+              }
+            </style>
+            <h4 class="white-text">ผลงานสินค้า</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- Section Product -->
+<section class="image-gallery">
+  <div class="container text-center py-5">
+    <div class="row">
+      <!-- รายการภาพที่ 1 -->
+      <div class="col-md-4">
+        <div class="image-card">
+          <div class="image-label"><h4>ฉลากสินค้า</h4></div>
+          <img class="auto-slide" data-images='["image/1.jpg"]' src="image/1.jpg" alt="Online Order Service">
+        </div>
+        <br><br>
+        <button class="btn-icon">
+          <img src="image/photo1.png" width="54" height="54" alt=""/>
+        </button>
+        <a href="vdo.html">
+          <button class="btn-icon">
+            <img src="image/movie1.png" width="54" height="54" alt=""/>
+          </button>
+        </a>
+      </div>
+
+      <!-- รายการภาพที่ 2 -->
+      <div class="col-md-4">
+        <div class="image-card">
+          <div class="image-label"><h4>สติ๊กเกอร์</h4></div>
+          <img class="auto-slide" data-images='["image/1-1.jpg", "image/2.jpg", "image/3.jpg", "image/4.jpg", "image/5.jpg", "image/6.jpg"]' src="image/2.jpg" alt="Consultation Service">
+        </div>
+        <br><br>
+        <button class="btn-icon">
+          <img src="image/photo1.png" width="54" height="54" alt=""/>
+        </button>
+        <a href="vdo.html">
+          <button class="btn-icon">
+            <img src="image/movie1.png" width="54" height="54" alt=""/>
+          </button>
+        </a>
+      </div>
+
+      <!-- รายการภาพที่ 3 -->
+      <div class="col-md-4">
+        <div class="image-card">
+          <div class="image-label"><h4>นามบัตร</h4></div>
+          <img class="auto-slide" data-images='["image/3-1.jpg", "image/3-2.jpg", "image/3-3.jpg", "image/3-4.jpg", "image/3-5.jpg"]' src="image/3-1.jpg" alt="Fast Service">
+        </div>
+        <br><br>
+        <button class="btn-icon">
+          <img src="image/photo1.png" width="54" height="54" alt=""/>
+        </button>
+        <a href="vdo.html">
+          <button class="btn-icon">
+            <img src="image/movie1.png" width="54" height="54" alt=""/>
+          </button>
+        </a>
+      </div>
+
+      <!-- รายการภาพที่ 4 -->
+      <div class="col-md-4">
+        <div class="image-card">
+          <div class="image-label"><h4>ใบปลิว</h4></div>
+            <img class="auto-slide" data-images='["image/4.jpg"]' src="image/4.jpg" alt="Shop Service">
+        </div>
+        <br><br>
+        <button class="btn-icon">
+          <img src="image/photo1.png" width="54" height="54" alt=""/>
+        </button>
+        <a href="vdo.html">
+          <button class="btn-icon">
+            <img src="image/movie1.png" width="54" height="54" alt=""/>
+          </button>
+        </a>
+      </div>
+
+      <!-- รายการภาพที่ 5 -->
+      <div class="col-md-4">
+        <div class="image-card">
+          <div class="image-label"><h4>ป้ายไวนิล</h4></div>
+          <img class="auto-slide" data-images='["image/5-1.jpg", "image/5-2.jpg", "image/5-3.jpg", "image/5-4.jpg"]' src="image/5-1.jpg" alt="Product Service">
+        </div>
+        <br><br>
+        <button class="btn-icon">
+          <img src="image/photo1.png" width="54" height="54" alt=""/>
+        </button>
+        <a href="vdo.html">
+          <button class="btn-icon">
+            <img src="image/movie1.png" width="54" height="54" alt=""/>
+          </button>
+        </a>
+      </div>
+
+      <!-- รายการภาพที่ 6 -->
+      <div class="col-md-4">
+        <div class="image-card">
+          <div class="image-label"><h4>ป้ายแท็ก</h4></div>
+          <img class="auto-slide" data-images='["image/6-1.jpg", "image/6-2.jpg", "image/6-3.jpg", "image/6-4.jpg"]' src="image/6-1.jpg" alt="Save Service">
+        </div>
+        <br><br>
+        <button class="btn-icon">
+          <img src="image/photo1.png" width="54" height="54" alt=""/>
+        </button>
+        <a href="vdo.html">
+          <button class="btn-icon">
+            <img src="image/movie1.png" width="54" height="54" alt=""/>
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function startImageSlideshow() {
+    document.querySelectorAll('.auto-slide').forEach(img => {
+      const images = JSON.parse(img.getAttribute('data-images'));
+      let index = 0;
+
+      setInterval(() => {
+        index = (index + 1) % images.length;
+        img.src = images[index];
+      }, 3000);
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', startImageSlideshow);
+</script>
+
+
+<!-- Section ก่อน footer -->
+<section class="before-footer">
+  <div class="container-fluid">
+    <div class="image-background">
+      <div class="text-container">
+        <p><img src="image/s-fb.png" alt="Facebook"> ST Print</p>
+        <p><img src="image/s-line.png" alt="Line"> @meawstprint</p>
+        <p><img src="image/s-phone.png" alt="Phone"> 083 539 6688</p>
+        <p><img src="image/s-mail.png" alt="Email"> stprint68@hotmail.com</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>ST Print © 2025 | All Rights Reserved</p>
+  </footer>
+
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Load jQuery require for isotope -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- Isotope -->
+    <script src="assets/js/isotope.pkgd.js"></script>
+    <!-- Page Script -->
+    <script>
+      $(window).load(function () {
+        // init Isotope
+        var $projects = $('.projects').isotope({
+          itemSelector: '.project',
+          layoutMode: 'fitRows'
+        });
+        $(".filter-btn").click(function () {
+          var data_filter = $(this).attr("data-filter");
+          $projects.isotope({
+            filter: data_filter
+          });
+          $(".filter-btn").removeClass("active");
+          $(".filter-btn").removeClass("shadow");
+          $(this).addClass("active");
+          $(this).addClass("shadow");
+          return false;
+        });
+      });
+    </script>
+    <!-- Templatemo -->
+    <script src="assets/js/templatemo.js"></script>
+    <!-- Custom -->
+    <script src="assets/js/custom.js"></script>
+      
+</body>
+
+</html>

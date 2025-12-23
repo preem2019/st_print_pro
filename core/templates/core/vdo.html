@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>ST Print</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-warning shadow">
+
+    <div class="container">
+      <a class="navbar-brand h1" href="index.html">
+        <img src="assets/img/logo.png" width="200" height="100" alt="ST Print">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <h4><a class="nav-link" href="index.html">หน้าแรก</a></h4>
+          </li>
+          <li class="nav-item">
+            <h4><a class="nav-link" href="price.html">ราคาสินค้า</a></h4>
+          </li>
+          <li class="nav-item">
+            <h4><a class="nav-link" href="work.html">ขั้นตอนการทำงาน</a></h4>
+          </li>
+          <li class="nav-item">
+            <h4><a class="nav-link" href="product.html">ผลงาน</a></h4>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Close Header -->
+  <!-- Start Banner Hero -->
+  <div id="index_banner" class="banner-vertical-center-index container-fluid pt-5">
+    <div class="w-100 bg-primary py-3">
+      <div class="container">
+        <div class="row pt-2">
+          <div class="col-12 d-flex justify-content-center align-items-center" style="height: 100%;">
+            <style>
+              .white-text {
+                color: white;
+                text-align: center;
+              }
+            </style>
+            <h4 class="white-text">คลิปขั้นตอนการทำงานสินค้า</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+	  <br>
+<br>
+    <center><h4>ฉลากสินค้า</h4></center>
+      <br>
+	   <div class="video-container">
+    		<video controls>
+        	<source src="vdo/คลิปฉลากสินค้า.mp4" type="video/mp4">
+    		</video>
+	  </div>
+	<br>
+<br>
+  
+
+<!-- Section ก่อน footer -->
+<section class="before-footer">
+  <div class="container-fluid">
+    <div class="image-background">
+      <div class="text-container">
+        <p><img src="image/s-fb.png" alt="Facebook"> ST Print</p>
+        <p><img src="image/s-line.png" alt="Line"> @meawstprint</p>
+        <p><img src="image/s-phone.png" alt="Phone"> 083 539 6688</p>
+        <p><img src="image/s-mail.png" alt="Email"> stprint68@hotmail.com</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>ST Print © 2025 | All Rights Reserved</p>
+  </footer>
+
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Load jQuery require for isotope -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- Isotope -->
+    <script src="assets/js/isotope.pkgd.js"></script>
+    <!-- Page Script -->
+    <script>
+      $(window).load(function () {
+        // init Isotope
+        var $projects = $('.projects').isotope({
+          itemSelector: '.project',
+          layoutMode: 'fitRows'
+        });
+        $(".filter-btn").click(function () {
+          var data_filter = $(this).attr("data-filter");
+          $projects.isotope({
+            filter: data_filter
+          });
+          $(".filter-btn").removeClass("active");
+          $(".filter-btn").removeClass("shadow");
+          $(this).addClass("active");
+          $(this).addClass("shadow");
+          return false;
+        });
+      });
+    </script>
+    <!-- Templatemo -->
+    <script src="assets/js/templatemo.js"></script>
+    <!-- Custom -->
+    <script src="assets/js/custom.js"></script>
+</body>
+
+</html>

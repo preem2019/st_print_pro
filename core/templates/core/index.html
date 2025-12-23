@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>ST Index</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-warning shadow">
+    <div class="container">
+      <a class="navbar-brand h1" href="index.html">
+        <img src="assets/img/logo.png" width="200" height="100" alt="ST Print">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><h4><a class="nav-link" href="index.html">หน้าแรก</a></h4></li>
+          <li class="nav-item"><h4><a class="nav-link" href="price.html">ราคาสินค้า</a></h4></li>
+          <li class="nav-item"><h4><a class="nav-link" href="work.html">ขั้นตอนการทำงาน</a></h4></li>
+          <li class="nav-item"><h4><a class="nav-link" href="product.html">ผลงาน</a></h4></li>
+        </ul>
+      </div>
+        <script>
+        document.addEventListener("DOMContentLoaded", function () {
+  const links = document.querySelectorAll(".nav-link"); // เลือกลิงก์ทั้งหมด
+  const currentUrl = window.location.pathname.split("/").pop(); // ดึงชื่อไฟล์หน้าปัจจุบัน
+
+  links.forEach(link => {
+    if (link.getAttribute("href") === currentUrl) {
+      link.classList.add("active"); // เพิ่มคลาส active ให้ลิงก์ที่ตรงกับหน้า
+    }
+  });
+});
+        </script>
+    </div>
+  </nav><br>
+<br>
+
+<!-- Slideshow Section -->
+<div class="slideshow-container">
+  <div class="slides">
+    <div class="slide_content">
+      <h1 class="show"><img src="image/Example1.png" alt="Image 1"></h1>
+    </div>
+    <div class="slide_content">
+      <h1 class="show"><img src="image/Example1-1.png" alt="Image 2"></h1>
+    </div>
+    <div class="slide_content">
+      <h1 class="show"><img src="image/Example2.png" alt="Image 3"></h1>
+    </div>
+    <div class="slide_content">
+      <h1 class="show"><img src="image/Example1.png" alt="Image 4"></h1>
+    </div>
+  </div>
+</div>
+
+<section class="contact">
+  <div class="container text-center py-5">
+    <h2>ติดต่อเรา</h2>
+    <br><br><br><br>
+    <div class="row">
+      <div class="col-md-3 col-6">
+        <img src="image/facebook_2175193.png" alt="Facebook" class="icon1">
+      <p><h4>ST Print</h4></p> </div>
+      <div class="col-md-3 col-6">
+        <img src="image/email_3178158.png" alt="Email" class="icon2">
+        <p><h4>stprint68@hotmail.com</h4></p>
+      </div>
+      <div class="col-md-3 col-6">
+        <img src="image/phone-call_455705.png" alt="Phone" class="icon3">
+        <p><h4>083 539 6688</h4></p>
+      </div>
+      <div class="col-md-3 col-6">
+        <img src="image/line_3669731.png" alt="Line" class="icon4">
+        <p><h4>@meawstprint</h4></p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Service Section -->
+<section class="services">
+  <div class="container text-center py-5">
+    <h2>บริการของเรา</h2>
+	  <br>
+		<br>
+	  <br>
+		<br>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="service-card">
+          <img src="image/chat_589723.png" alt="Online Order Service"><br>
+			<p><h4>สั่งผ่านออนไลน์</h4></p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-card">
+          <img src="image/notes_768818.png" alt="Consultation Service">
+			<p><h4>แนะนำให้คำปรึกษา</h4></p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-card">
+          <img src="image/time_1267772.png" alt="Fast Service">
+			<p><h4>รวดเร็ว ทันใจ</h4></p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-card">
+          <img src="image/store_17745331.png" alt="Fast Service">
+			<p><h4>มีหน้าร้าน</h4></p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-card">
+          <img src="image/best-product_12177409.png" alt="Fast Service">
+			<p><h4>ใช้สินค้าคุณภาพดี</h4></p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-card">
+          <img src="image/earnings_17980917.png" alt="Fast Service">
+			<p><h4>ราคาประหยัด</h4></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Section ก่อน footer -->
+<section class="before-footer">
+  <div class="container-fluid">
+    <div class="image-background">
+      <div class="text-container">
+        <p><img src="image/s-fb.png" alt="Facebook"> ST Print</p>
+        <p><img src="image/s-line.png" alt="Line"> @meawstprint</p>
+        <p><img src="image/s-phone.png" alt="Phone"> 083 539 6688</p>
+        <p><img src="image/s-mail.png" alt="Email"> stprint68@hotmail.com</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>ST Print © 2025 | All Rights Reserved</p>
+  </footer>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const slides = document.querySelectorAll('.slide_content'); // เลือกภาพทั้งหมด
+    let currentIndex = 0;
+
+    // ซ่อนภาพทั้งหมด
+    slides.forEach((slide, index) => {
+      slide.style.display = 'none'; // เริ่มต้นไม่แสดงภาพ
+    });
+
+    // แสดงภาพแรก
+    slides[currentIndex].style.display = 'block';
+
+    // ฟังก์ชันเปลี่ยนภาพ
+    function changeSlide() {
+      slides[currentIndex].style.display = 'none'; // ซ่อนภาพปัจจุบัน
+      currentIndex = (currentIndex + 1) % slides.length; // คำนวณภาพถัดไป (ใช้ modulo เพื่อกลับไปที่ภาพแรก)
+      slides[currentIndex].style.display = 'block'; // แสดงภาพถัดไป
+    }
+
+    // ตั้งเวลาให้แสดงภาพใหม่ทุก 5 วินาที
+    setInterval(changeSlide, 5000); // ทุก 5000ms หรือ 5 วินาที
+  });
+</script>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

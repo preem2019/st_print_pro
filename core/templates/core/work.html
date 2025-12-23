@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>ST Print</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-warning shadow">
+    <div class="container">
+      <a class="navbar-brand h1" href="index.html">
+        <img src="assets/img/logo.png" width="200" height="100" alt="ST Print">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><h4><a class="nav-link" href="index.html">หน้าแรก</a></h4></li>
+          <li class="nav-item"><h4><a class="nav-link" href="price.html">ราคาสินค้า</a></h4></li>
+          <li class="nav-item"><h4><a class="nav-link" href="work.html">ขั้นตอนการทำงาน</a></h4></li>
+          <li class="nav-item"><h4><a class="nav-link" href="product.html">ผลงาน</a></h4></li>
+        </ul>
+      </div>
+         <script>
+        document.addEventListener("DOMContentLoaded", function () {
+  const links = document.querySelectorAll(".nav-link"); // เลือกลิงก์ทั้งหมด
+  const currentUrl = window.location.pathname.split("/").pop(); // ดึงชื่อไฟล์หน้าปัจจุบัน
+
+  links.forEach(link => {
+    if (link.getAttribute("href") === currentUrl) {
+      link.classList.add("active"); // เพิ่มคลาส active ให้ลิงก์ที่ตรงกับหน้า
+    }
+  });
+});
+        </script>
+    </div>
+  </nav><br>
+<br>
+  <!-- Steps Section -->
+<div class="steps-section">
+  <div class="container">
+    <h4 class="text-white text-center">ขั้นตอนการทำงาน</h4>
+    <div class="steps-container mt-4">
+      <div class="step-card" onclick="showPopup('ติดต่อสอบถาม')">
+        <a href="https://www.facebook.com/stprint123?locale=th_TH"><img src="image/chat_call.png" class="img-fluid" alt="ติดต่อสอบถาม"></a>
+        <h5>ติดต่อสอบถาม</h5>
+      </div>
+      <div class="step-card" onclick="showPopup('ชำระเงิน')">
+        <img src="image/pay_625548.png" class="img-fluid" alt="ชำระเงิน">
+        <h5>ชำระเงิน</h5>
+      </div>
+      <div class="step-card" onclick="showPopup('ออกแบบ')">
+        <img src="image/design_3449703.png" class="img-fluid" alt="ออกแบบ">
+        <h5>ออกแบบ</h5>
+      </div>
+      <div class="step-card" onclick="showPopup('ผลิตงาน')">
+        <img src="image/printer_9390585.png" class="img-fluid" alt="ผลิตงาน">
+        <h5>ผลิตงาน</h5>
+      </div>
+      <div class="step-card" onclick="showPopup('จัดส่งสินค้า')">
+        <img src="image/delivery-truck_9356923.png" class="img-fluid" alt="จัดส่งสินค้า">
+        <h5>จัดส่งสินค้า</h5>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- พื้นที่แสดงข้อความ -->
+<div id="display-area" class="text-center mt-4"></div>
+<!-- Popup for displaying -->
+<div id="popup" class="popup-overlay">
+  <div class="popup-content">
+    <h4 id="popup-text"></h4>
+    <button onclick="closePopup()">ปิด</button>
+  </div>
+</div>
+    <script>
+  function showPopup(stepName) {
+  // ถ้ากด "ติดต่อสอบถาม" ไม่ต้องทำอะไร
+  if (stepName === 'ติดต่อสอบถาม') return;
+
+  let displayText = "";
+
+  // กำหนดข้อความสำหรับแต่ละขั้นตอน
+  if (stepName === 'ชำระเงิน') {
+    displayText = `
+        <h4>ชำระเงิน</h4>
+        <img src="image/qrcode.png" alt="ชำระเงิน" style="width:250px; height:auto;">
+        <br>
+        <br>
+        <p>เลขบัญชี: 123-456-7890</p>
+        <p>กรุณาชำระเงินตามเลขบัญชีที่แสดง</p>
+    `;
+  }if (stepName === 'ออกแบบ') {
+    displayText = `
+        <h4>ออกแบบ</h4>
+        <br>
+        <br>
+        <p>ในส่วนของขั้นตอนการออกแบบนั้นจะเป็นช่วงที่ช่างได้ทำการออกแบบดีไซน์</p>
+        <p>ตามที่ลูกค้าได้ทำการส่งข้อมูลผ่านแอดมิน</p>
+    `;
+  } if (stepName === 'ผลิตงาน') {
+    displayText = `
+        <h4>ผลิตงานน</h4>
+        <br>
+        <br>
+        <p>ขั้นตอนผลิตงาน จะเป็นช่วงที่งานของลูกค้าได้คอนเฟิร์มสินค้าแล้ว</p>
+        <p>ทางร้านจะทำการผลิตผลงานออกมา</p>
+    `;
+  }  if (stepName === 'จัดส่งสินค้า') {
+    displayText = `
+        <h4>จัดส่งสินค้า</h4>
+        <br>
+        <br>
+        <p>ขั้นตอนการจัดส่งสินค้า เป็นขั้นตอนสุดท้ายของการทำงาน</p>
+        <p>โดยทางร้านจะทำการส่งสินค้าตามที่ลูกค้าระบุที่อยู่เอาไว้</p>
+    `;
+}
+
+  // แสดงข้อความที่พื้นที่ด้านล่าง
+  document.getElementById('display-area').innerHTML = displayText;
+}
+        
+</script>
+<br>
+    
+<!-- Section ก่อน footer -->
+<section class="before-footer">
+  <!-- Section Overlay to darken the background -->
+  <div id="section-overlay" class="section-overlay"></div>
+
+  <div class="container-fluid">
+    <div class="image-background">
+      <div class="text-container">
+        <p><img src="image/s-fb.png" alt="Facebook"> ST Print</p>
+        <p><img src="image/s-line.png" alt="Line"> @meawstprint</p>
+        <p><img src="image/s-phone.png" alt="Phone"> 083 539 6688</p>
+        <p><img src="image/s-mail.png" alt="Email"> stprint68@hotmail.com</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>ST Print © 2025 | All Rights Reserved</p>
+  </footer>
+
+
+  <!-- Scripts -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

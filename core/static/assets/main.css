@@ -1,0 +1,475 @@
+@charset "utf-8";
+/* CSS Document */
+/* General Styles */
+body {
+  font-family: "Anuphan", serif; /* กำหนดฟอนต์เป็น Anuphan */
+  font-optical-sizing: auto;
+  font-weight: 500; /* กำหนดน้ำหนักฟอนต์ */
+  font-style: normal;
+  line-height: 0.6; /* กำหนดระยะห่างระหว่างบรรทัด */
+  margin: 0; /* ลบระยะขอบรอบๆ */
+  padding: 0; /* ลบการเยื้อง */
+  display: flex;
+  flex-direction: column; /* ใช้ฟอร์แมตการจัดวางแบบคอลัมน์ */
+  min-height: 100vh; /* กำหนดความสูงขั้นต่ำของหน้าให้เต็มหน้าจอ */
+}
+
+
+.content {
+  flex: 1; /* ให้พื้นที่ของคอนเทนต์ยืดตามพื้นที่ที่เหลือ */
+}
+
+/* Image Section */
+.image-section {
+  width: 100%; /* กำหนดความกว้างเป็น 100% */
+  height: auto;
+  max-height: 600px; /* จำกัดความสูงสูงสุดของรูป */
+  display: flex;
+  justify-content: center; /* จัดตำแหน่งรูปให้กึ่งกลาง */
+  align-items: center;
+  background-color: #f8f9fa; /* สีพื้นหลัง */
+}
+
+.image-section img {
+  width: 100%; /* กำหนดรูปภาพให้มีความกว้างเต็มที่ */
+  height: auto;
+  object-fit: cover; /* รูปจะถูกครอบให้เต็มพื้นที่ */
+}
+
+/* Navbar */
+.navbar-brand img {
+    max-height: 77px; /* กำหนดขนาดสูงสุดของโลโก้ */
+}
+
+.nav-link {
+  color: black;
+  font-weight: 400;
+  text-decoration: none; /* ลบเส้นใต้ */
+  margin: 0 15px; /* กำหนดระยะห่างจากกัน */
+}
+
+.nav-link:hover {
+  color: white; /* เมื่อวางเมาส์จะเปลี่ยนสีเป็นขาว */
+}
+
+.navbar-nav .nav-item .nav-link.active {
+  color: blue !important; /* เปลี่ยนสีเป็นน้ำเงิน */
+  font-weight: bold; /* ทำให้ตัวหนา */
+}
+/* Steps Section */
+.steps-section {
+    background-color: #0046B5; /* สีพื้นหลังส่วนนี้ */
+    padding: 50px 0;
+}
+
+.steps-container {
+  display: flex;
+  flex-wrap: wrap; /* ทำให้มีการจัดวางรูปแบบหลายแถว */
+  justify-content: center; /* จัดรูปแบบให้กึ่งกลาง */
+  gap: 20px; /* ระยะห่างระหว่างไอเทม */
+}
+
+.step-card {
+  background-color: #fff; /* สีพื้นหลังของการ์ด */
+  padding: 20px;
+  border: 1px solid #ccc; /* เส้นขอบรอบๆ การ์ด */
+  border-radius: 8px; /* มุมโค้งมน */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เงารอบการ์ด */
+  text-align: center;
+  width: 180px;
+  position: relative;
+  overflow: hidden; 
+  transition: transform 0.3s ease; /* เพิ่มการเคลื่อนไหวเมื่อมีการโฮเวอร์ */
+}
+
+.step-card img {
+  max-width: 80%; /* กำหนดขนาดรูปภาพ */
+  height: auto;
+  transition: transform 0.3s ease; /* การเคลื่อนไหวเมื่อรูปถูกโฮเวอร์ */
+}
+
+.step-card:hover img {
+    transform: scale(1.1); /* เมื่อโฮเวอร์จะขยายรูป */
+}
+
+.step-card h5 {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Footer */
+.footer {
+  background-color: #222; /* สีพื้นหลังของฟุตเตอร์ */
+  color: #fff; /* สีของตัวอักษร */
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* Slides Wrapper */
+.slideshow-container {
+    width: 100%;
+    max-height: 600px;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0px 0px rgba(0, 0, 0, 0.3); /* เงารอบๆ สไลด์ */
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.slide_content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center; /* จัดตำแหน่งให้กึ่งกลาง */
+  align-items: center;
+}
+
+.slide_content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Contact Section */
+.contact {
+  margin-top: 0;
+  padding-top: 20px;
+}
+
+.contact .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact .col-md-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.contact .col-md-3 img {
+    width: 40%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* Service Section */
+.services .row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.services .col-md-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 30%;
+  margin-bottom: 20px;
+}
+
+.services .service-card img {
+    width: 40%;
+    margin: 5%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+  .services .col-md-4 {
+    flex: 0 0 48%;
+  }
+}
+
+@media (max-width: 480px) {
+  .services .col-md-4 {
+    flex: 0 0 100%;
+  }
+}
+
+/* Image Gallery */
+.image-gallery .image-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image-gallery .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image-gallery .col-md-4 {
+  flex: 0 0 33.33%;
+  padding: 15px;
+}
+
+@media (max-width: 768px) {
+  .image-gallery .col-md-4 {
+    flex: 0 0 48%;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-gallery .col-md-4 {
+    flex: 0 0 48%;
+  }
+}
+
+.image-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.image-label {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.image-buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-icon {
+  background-color: #FFC107;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+  border-radius: 8px;
+  margin-right: 15px;
+}
+
+.btn-icon:hover {
+  opacity: 0.8;
+}
+
+.btn-icon img {
+  width: 54px;
+  height: 54px;
+}
+
+.image-buttons {
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .btn-icon img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-icon img {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.btn-icon:hover {
+  opacity: 0.7;
+}
+
+/* Before Footer */
+.before-footer {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  background-image: url('image/background.png');
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+}
+
+/* Text container */
+.text-container {
+  position: absolute;
+  top: 90px;
+  left: 190px;
+  color: black;
+  font-size: 26px;
+  line-height: 1.6;
+}
+
+.text-container p {
+  margin: 10px 0;
+}
+
+.text-container img {
+  width: 25px;
+  height: auto;
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .before-footer {
+    height: 400px;
+    background-size: cover;
+  }
+
+  .text-container {
+    font-size: 20px;
+    left: 30px;
+    top: 60px;
+  }
+
+  .text-container p {
+    margin: 5px 0;
+  }
+
+  .text-container img {
+    width: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .before-footer {
+    height: 300px;
+    background-size: cover;
+  }
+
+  .text-container {
+    font-size: 18px;
+    left: 15px;
+    top: 40px;
+  }
+
+  .text-container p {
+    margin: 3px 0;
+  }
+
+  .text-container img {
+    width: 18px;
+  }
+}
+
+/* Video Container */
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    max-height: 80vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.video-container video {
+    object-fit: contain;
+    max-width: 90%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .video-container {
+        max-height: 50vh;
+    }
+}
+
+/* Popup Overlay */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+#popup-text {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 300px;
+  animation: popupAnimation 0.3s ease-in-out;
+}
+
+@keyframes popupAnimation {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Section Overlay */
+.section-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.popup-overlay {
+  z-index: 2;
+}
+#display-area {
+  background-color: white; /* พื้นหลังสีขาว */
+  padding: 15px; /* เว้นระยะห่าง */
+  min-height: 50px; /* ความสูงขั้นต่ำ */
+    font-size: 20px
+}
